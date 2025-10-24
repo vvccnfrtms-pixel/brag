@@ -1,5 +1,5 @@
 /* ==============================
-   RESET AND BASE STYLES
+   RESET & BASE STYLES
    ============================== */
 * {
   margin: 0;
@@ -25,6 +25,9 @@ img {
   display: block;
 }
 
+/* ==============================
+   CONTAINER
+   ============================== */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -53,26 +56,31 @@ img {
   width: auto;
 }
 
+/* ==============================
+   NAVIGATION
+   ============================== */
 .main-nav {
   position: relative;
 }
 
-.main-nav .nav-links {
+.nav-links {
   display: flex;
   gap: 20px;
   list-style: none;
-}
-
-.main-nav .nav-links li a {
-  padding: 8px 12px;
-  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
-.main-nav .nav-links li a:hover,
-.main-nav .nav-links li a.active {
+.nav-links li a {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
   background-color: #FFD94B;
   color: #0a0a0a;
+  box-shadow: 0 0 10px #FFD94B;
 }
 
 .menu-toggle {
@@ -85,6 +93,42 @@ img {
 }
 
 /* ==============================
+   BUTTONS
+   ============================== */
+.btn, .btn-outline {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: #FFD94B;
+  color: #0a0a0a;
+  border: none;
+  box-shadow: 0 0 10px #FFD94B;
+}
+
+.btn:hover {
+  background-color: #FFC300;
+  box-shadow: 0 0 20px #FFC300;
+}
+
+.btn-outline {
+  border: 2px solid #FFD94B;
+  background: transparent;
+  color: #FFD94B;
+  box-shadow: 0 0 10px #FFD94B inset;
+}
+
+.btn-outline:hover {
+  background-color: #FFD94B;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #FFD94B;
+}
+
+/* ==============================
    HERO SECTION
    ============================== */
 .hero {
@@ -93,8 +137,9 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 70vh;
+  min-height: 60vh;
   background: url('../img/hero-bg.jpeg') center/cover no-repeat;
+  margin-bottom: 40px;
 }
 
 .hero-overlay {
@@ -102,53 +147,30 @@ img {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10,10,10,0.7);
+  background: rgba(10,10,10,0.65);
 }
 
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 15px;
   color: #FFD94B;
-  text-shadow: 0 0 8px rgba(255,217,75,0.6);
 }
 
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  color: #fff;
-  text-shadow: 0 0 6px rgba(255,255,255,0.2);
+.hero-slogan {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  font-weight: 600;
-  border-radius: 6px;
-  background-color: #FFD94B;
-  color: #0a0a0a;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255,217,75,0.3);
-}
-
-.btn:hover {
-  background-color: #FFC300;
-  box-shadow: 0 0 20px rgba(255,217,75,0.6);
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* ==============================
-   SECTIONS & GRIDS
+   CARDS / GRID
    ============================== */
-section {
-  padding: 60px 0;
-}
-
-.grid {
+.grid, .features, .blog-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -156,60 +178,51 @@ section {
 
 .card {
   background-color: #111;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 6px;
+  padding: 15px;
   flex: 1 1 calc(33.333% - 20px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(255,217,75,0.5);
+  box-shadow: 0 0 20px #FFD94B;
 }
 
-.card h3, .card h4 {
-  color: #FFD94B;
+.card img {
+  border-radius: 4px;
   margin-bottom: 10px;
 }
 
+.card h4 {
+  color: #FFD94B;
+  margin-bottom: 8px;
+}
+
 .card p {
-  color: #ccc;
   font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 10px;
 }
 
-/* ==============================
-   SOCIAL ICONS
-   ============================== */
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+/* BADGES */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #FFC300;
+  color: #0a0a0a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
-.social-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke: #FFD94B;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover svg {
-  stroke: #FFC300;
-  transform: scale(1.2);
-}
-
-/* ==============================
-   ABOUT, BLOG, CONTACT PREVIEWS
-   ============================== */
-.about-preview, .blog-preview, .contact-preview {
-  text-align: center;
-}
-
-.about-preview p, .contact-preview p {
-  font-size: 1.1rem;
-  color: #ddd;
+.coming-soon {
+  background-color: #FF5733;
+  color: #fff;
 }
 
 /* ==============================
@@ -227,13 +240,92 @@ section {
 }
 
 /* ==============================
+   FOOTER
+   ============================== */
+.site-footer {
+  background-color: #111;
+  padding: 20px 0;
+  text-align: center;
+  color: #ccc;
+}
+
+.site-footer small {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.site-footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #FFD94B;
+  transition: stroke 0.3s;
+}
+
+.social-icon:hover svg {
+  stroke: #FFC300;
+}
+
+.footer-links a {
+  color: #FFD94B;
+  margin: 0 5px;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   CONTACT FORM
+   ============================== */
+.contact-form {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 6px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  color: #FFD94B;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #0a0a0a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #FFD94B;
+}
+
+/* ==============================
    RESPONSIVE
    ============================== */
 @media (max-width: 1024px) {
-  .grid {
+  .grid, .features, .blog-grid {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .card {
     flex: 1 1 calc(50% - 20px);
   }
@@ -243,6 +335,7 @@ section {
   .menu-toggle {
     display: block;
   }
+
   .nav-links {
     position: absolute;
     top: 100%;
@@ -251,20 +344,34 @@ section {
     flex-direction: column;
     width: 200px;
     display: none;
+    z-index: 1000;
   }
+
   .nav-links.show {
     display: flex;
   }
+
   .nav-links li {
     margin: 10px 0;
   }
+
   .card {
     flex: 1 1 100%;
   }
-  .hero-title {
+
+  .hero-slogan {
     font-size: 2rem;
   }
-  .hero-subtitle {
+
+  .hero-description {
     font-size: 1rem;
   }
+}
+
+/* ==============================
+   HERO IMAGE ADJUSTMENT FOR MOBILE
+   ============================== */
+.hero {
+  background-size: cover;
+  background-position: center;
 }

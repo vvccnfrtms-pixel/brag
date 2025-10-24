@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Introducing Our New Fuzz Pedal",
+    "date": "2025-10-25",
+    "author": "Dawie Olivier",
+    "excerpt": "Discover the new boutique fuzz pedal that brings vintage analog warmth to your tone. Limited edition runs available now!",
+    "image": "assets/img/pedal1.jpg",
+    "url": "blog/fuzz-pedal-release.html"
+  },
+  {
+    "id": 2,
+    "title": "Top 5 Tips for Using Delay Pedals",
+    "date": "2025-10-20",
+    "author": "Jane Smith",
+    "excerpt": "Master the art of delay with these five essential tips to get lush, professional sound every time you play.",
+    "image": "assets/img/pedal2.jpg",
+    "url": "blog/delay-pedal-tips.html"
+  },
+  {
+    "id": 3,
+    "title": "The Story Behind Our Overdrive Pedal",
+    "date": "2025-10-15",
+    "author": "Dawie Olivier",
+    "excerpt": "Learn how our overdrive pedal was designed to respond dynamically to your playing, giving tube-like tones instantly.",
+    "image": "assets/img/pedal3.jpg",
+    "url": "blog/overdrive-story.html"
+  }
+]

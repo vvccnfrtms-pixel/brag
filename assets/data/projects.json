@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "title": "SignalCraft Fuzz Pedal",
+      "description": "Rugged analog fuzz with boutique tone. Limited edition finish.",
+      "image": "assets/img/pedal1.jpg",
+      "link": "https://example.com/projects/fuzz-pedal"
+    },
+    {
+      "title": "Analog Delay",
+      "description": "Warm, lush repeats with precise control for recording or live performance.",
+      "image": "assets/img/pedal2.jpg",
+      "link": "https://example.com/projects/analog-delay"
+    },
+    {
+      "title": "Overdrive Pedal",
+      "description": "Natural tube-like overdrive that responds dynamically to your playing.",
+      "image": "assets/img/pedal3.jpg",
+      "link": "https://example.com/projects/overdrive"
+    },
+    {
+      "title": "Chorus & Modulation",
+      "description": "Rich analog modulation effects for studio and stage performance.",
+      "image": "assets/img/pedal4.jpg",
+      "link": "https://example.com/projects/chorus-mod"
+    }
+  ]
+}

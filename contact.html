@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SignalCraft Audio — Contact</title>
+  <meta name="description" content="Contact SignalCraft Audio. Reach out for questions, support, or inquiries about our boutique guitar pedals." />
+  <link rel="icon" href="assets/img/logo-full.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">
+          <img src="assets/img/logo-full.png" alt="SignalCraft Audio Logo" class="logo-img">
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a class="cta btn" href="shop.html">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <h1 class="hero-slogan">Get in Touch</h1>
+      <p class="hero-description">Have a question or need support? Send us a message and we’ll respond promptly.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <main class="container fade-in">
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- WAVE -->
+  <section class="bottom-wave">
+    <svg viewBox="0 0 1000 120" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="wave-gradient" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#FFD94B"/>
+          <stop offset="50%" stop-color="#FFC300"/>
+          <stop offset="100%" stop-color="#FFD94B"/>
+        </linearGradient>
+      </defs>
+      <polyline fill="none" stroke="url(#wave-gradient)" stroke-width="4" stroke-linecap="round"
+        points="0,60 100,50 200,70 300,40 400,60 500,55 600,65 700,45 800,60 900,50 1000,60">
+      </polyline>
+    </svg>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> SignalCraft Audio — Hand-tested in East London, South Africa.</small>
+      <div class="social">
+        <a href="https://www.instagram.com/" target="_blank" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-icon" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/></svg>
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="products.html">Products</a> |
+        <a href="about.html">About</a> |
+        <a href="shop.html">Shop</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    // Contact form simulated submission
+    const contactForm = document.getElementById('contact-form');
+    if(contactForm){
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you shortly.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

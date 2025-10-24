@@ -1,31 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SignalCraft Audio — Boutique Guitar Pedals</title>
-  <meta name="description" content="SignalCraft Audio — boutique guitar effect pedals. Hand-tested in East London. Crafting Your Perfect Tone." />
-  <link rel="icon" href="assets/img/logo-full.png" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of [Your Name] — Web Designer, UX Specialist, and Creative Developer. Showcasing projects, blogs, and expertise in modern web design.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <a href="index.html">
-          <img src="assets/img/logo-full.png" alt="SignalCraft Audio Logo" class="logo-img">
+          <img src="assets/img/logo.svg" alt="Your Logo" class="logo-img">
         </a>
       </div>
-
       <nav class="main-nav" aria-label="Main navigation">
         <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="products.html">Products</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a class="cta btn" href="shop.html">Shop</a></li>
         </ul>
       </nav>
     </div>
@@ -35,72 +35,57 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-inner">
-      <h1 class="hero-slogan">Crafting Your Perfect Tone</h1>
-      <p class="hero-description">Hand-built boutique guitar pedals — precision, passion, and pure analog sound.</p>
-      <a href="products.html" class="btn hero-btn">Explore Pedals</a>
+      <h1 class="hero-title">Hi, I’m [Your Name]</h1>
+      <p class="hero-subtitle">Web Designer & UX Specialist crafting high-impact digital experiences for brands worldwide.</p>
+      <a href="portfolio.html" class="btn btn-glow">See My Work</a>
     </div>
   </section>
 
-  <!-- FEATURED PRODUCTS -->
-  <section class="featured-products container fade-in">
-    <h2>Featured Pedals</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="assets/img/pedal-1.jpg" alt="Overdrive Pedal">
-        <h3>Solar Drive</h3>
-        <p>Vintage-inspired analog warmth with clarity and bite.</p>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/pedal-2.jpg" alt="Chorus Pedal">
-        <h3>EchoMist</h3>
-        <p>Lush modulation with shimmering stereo movement.</p>
-      </div>
-      <div class="product-card">
-        <img src="assets/img/pedal-3.jpg" alt="Delay Pedal">
-        <h3>Pulse Delay</h3>
-        <p>Classic analog-style delay with dynamic feedback control.</p>
-      </div>
+  <!-- FEATURED PROJECTS -->
+  <section class="featured-projects container fade-in">
+    <h2>Featured Projects</h2>
+    <div class="grid" id="featured-projects">
+      <!-- Project items will be injected dynamically using JS -->
     </div>
   </section>
 
-  <!-- WAVE -->
-  <section class="bottom-wave">
-    <svg viewBox="0 0 1000 120" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="wave-gradient" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#FFD94B"/>
-          <stop offset="50%" stop-color="#FFC300"/>
-          <stop offset="100%" stop-color="#FFD94B"/>
-        </linearGradient>
-      </defs>
-      <polyline fill="none" stroke="url(#wave-gradient)" stroke-width="4" stroke-linecap="round"
-        points="0,60 100,50 200,70 300,40 400,60 500,55 600,65 700,45 800,60 900,50 1000,60">
-      </polyline>
-    </svg>
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview container fade-in">
+    <h2>About Me</h2>
+    <p>With a passion for market-driven design and human psychology, I create websites that not only look amazing but convert visitors into customers. <a href="about.html">Learn more →</a></p>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-preview container fade-in">
+    <h2>Latest Blog Posts</h2>
+    <div id="latest-blog-posts" class="grid">
+      <!-- Blog posts dynamically loaded via JS -->
+    </div>
+  </section>
+
+  <!-- CONTACT PREVIEW -->
+  <section class="contact-preview container fade-in">
+    <h2>Get in Touch</h2>
+    <p>Questions, collaborations, or opportunities? <a href="contact.html">Contact me →</a></p>
   </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> SignalCraft Audio — Hand-tested in East London, South Africa.</small>
+      <small>© <span id="year"></span> [Your Name]. All Rights Reserved.</small>
       <div class="social">
-        <a href="https://www.instagram.com/" target="_blank" class="social-icon" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <a class="social-icon" href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         </a>
-        <a href="https://www.youtube.com/" target="_blank" class="social-icon" aria-label="YouTube">
-          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.8 15.5V8.5l6.2 3.5-6.2 3.5z"/></svg>
+        <a class="social-icon" href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         </a>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
   <!-- SCRIPTS -->
+  <script src="assets/js/utils.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
